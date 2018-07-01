@@ -13,7 +13,7 @@
   "dependencies": {
     "@feathersjs/errors": "^3.3.0",
     "debug": "^3.1.0",
-    "nats": "^0.8.10"
+    "nats": "^1.0.0"
   },
   "devDependencies": {
     "@feathersjs/feathers": "^3.1.7",
