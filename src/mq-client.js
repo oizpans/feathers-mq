@@ -30,7 +30,11 @@ module.exports = function (params = {}) {
             nats.requestOne(`${name}.${method}`, JSON.stringify(request), {}, 2000, function(response) {
               if(response instanceof NATS.NatsError && response.code === NATS.REQ_TIMEOUT) { reject('Request timed out.'); }
               debug(`Got response ${response} on NATS for ${name}.${method}`)
-              resolve(JSON.parse(response));
+              response = JSON.parse(response);
+              if (response.errors) {
+                reject(response);
+              }
+              resolve(response);
               });
            } catch (e) {
              reject(e);
