@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon examples/server",
-    "client": "nodemon examples/client"
+    "client": "nodemon examples/client",
+    "lint": "eslint examples/*",
+    "lint-fix": "eslint examples/* --fix"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +19,9 @@
   },
   "devDependencies": {
     "@feathersjs/feathers": "^3.1.7",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
     "feathers-mongoose": "^6.1.2",
     "mongoose": "^5.1.7",
     "nodemon": "^1.17.5"
