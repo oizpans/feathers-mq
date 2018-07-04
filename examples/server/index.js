@@ -10,7 +10,7 @@ mongoose.connect('mongodb://localhost/feathers-mq');
 
 const app = feathers();
 
-app.set('name', 'ProjectName');
+app.set('name', 'ServerProjectName');
 
 app.configure(Server());
 app.configure(services);
