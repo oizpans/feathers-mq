@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon examples/server",
     "client": "nodemon examples/client",
-    "lint": "eslint examples/*",
-    "lint-fix": "eslint examples/* --fix"
+    "lint": "eslint lib/* examples/*",
+    "lint-fix": "eslint lib/* examples/* --fix"
   },
   "author": "",
   "license": "ISC",
