@@ -11,7 +11,7 @@
       "error",
       {
         "devDependencies": [
-          "examples/**"
+          "**/examples/**/**.js"
         ]
       }
     ],
