@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon examples/server",
-    "client": "nodemon examples/client",
+    "server": "DEBUG=feathers-mq:server:* nodemon examples/server",
+    "client": "DEBUG=feathers-mq:client:* nodemon examples/client",
     "lint": "eslint lib/* examples/*",
     "lint-fix": "eslint lib/* examples/* --fix"
   },
