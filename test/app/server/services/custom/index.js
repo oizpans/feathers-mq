@@ -1,6 +1,6 @@
 const customService = {
   create(data) {
-    return Promise.resolve({ customeServiceResult: data });
+    return Promise.resolve({ customServiceResult: data });
   },
 };
 

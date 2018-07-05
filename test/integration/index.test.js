@@ -82,5 +82,59 @@ module.exports = () => {
       expect(findResult.skip).to.be.equal(0);
       expect(findResult.data.length).to.be.equal(0);
     });
+
+    it('Can call existing create method on custom service and get response', async () => {
+      const result = await clientApp.service('ServerAppName.custom').create({
+        word: 'testcustomdata',
+        number: 12342532623,
+      });
+      expect(result.customServiceResult.word).to.be.equal('testcustomdata');
+      expect(result.customServiceResult.number).to.be.equal(12342532623);
+    });
+
+    it('Error calling nonexisting get method on custom service', async () => {
+      try {
+        await clientApp.service('ServerAppName.custom').get('12423564374574634');
+      } catch (e) {
+        expect(e.name).to.be.equal('MethodNotAllowed');
+        expect(e.message).to.be.equal('Method `get` is not supported by this endpoint.');
+      }
+    });
+
+    it('Error calling nonexisting find method on custom service', async () => {
+      try {
+        await clientApp.service('ServerAppName.custom').find({});
+      } catch (e) {
+        expect(e.name).to.be.equal('MethodNotAllowed');
+        expect(e.message).to.be.equal('Method `find` is not supported by this endpoint.');
+      }
+    });
+
+    it('Error calling nonexisting patch method on custom service', async () => {
+      try {
+        await clientApp.service('ServerAppName.custom').patch('12423532643643', { word: 'somewhere' });
+      } catch (e) {
+        expect(e.name).to.be.equal('MethodNotAllowed');
+        expect(e.message).to.be.equal('Method `patch` is not supported by this endpoint.');
+      }
+    });
+
+    it('Error calling nonexisting update method on custom service', async () => {
+      try {
+        await clientApp.service('ServerAppName.custom').update('12423532643643', { word: 'somewhere' });
+      } catch (e) {
+        expect(e.name).to.be.equal('MethodNotAllowed');
+        expect(e.message).to.be.equal('Method `update` is not supported by this endpoint.');
+      }
+    });
+
+    it('Error calling nonexisting remove method on custom service', async () => {
+      try {
+        await clientApp.service('ServerAppName.custom').remove('12423532643643');
+      } catch (e) {
+        expect(e.name).to.be.equal('MethodNotAllowed');
+        expect(e.message).to.be.equal('Method `remove` is not supported by this endpoint.');
+      }
+    });
   });
 };
