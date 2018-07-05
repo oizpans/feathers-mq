@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "nodemon -x 'mocha test/index.test.js --exit'",
     "server": "DEBUG=feathers-mq:server:* nodemon examples/server",
     "client": "DEBUG=feathers-mq:client:* nodemon examples/client",
-    "lint": "eslint lib/* examples/*",
-    "lint-fix": "eslint lib/* examples/* --fix"
+    "lint": "eslint lib/* examples/* test/*",
+    "lint-fix": "eslint lib/* examples/* test/* --fix"
   },
   "author": "",
   "license": "ISC",
@@ -19,10 +19,12 @@
   },
   "devDependencies": {
     "@feathersjs/feathers": "^3.1.7",
+    "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
     "feathers-mongoose": "^6.1.2",
+    "mocha": "^5.2.0",
     "mongoose": "^5.1.7",
     "nodemon": "^1.17.5"
   }
