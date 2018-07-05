@@ -11,7 +11,7 @@
       "error",
       {
         "devDependencies": [
-          "**/examples/**/**.js"
+          "**/examples/**/**.js", "**/test/**/**/**.js"
         ]
       }
     ],
@@ -30,6 +30,7 @@
     "semi": [
       "error",
       "always"
-    ]
+    ],
+    "no-underscore-dangle": 0
   }
 }
