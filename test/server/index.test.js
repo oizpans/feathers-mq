@@ -7,14 +7,14 @@ module.exports = () => {
     it('Cannot setup subscriptions when no app name set', async () => {
       const app = feathers();
       app.configure(Server());
-      expect(app.mqSuccess).to.be.equal(undefined);
+      expect(app.mq).to.be.equal(undefined);
     });
 
     it('Successfully setup nats subscriptions for app', async () => {
       const app = feathers();
       app.set('name', 'ServerTestName');
       app.configure(Server());
-      expect(app.mqSuccess).to.be.equal(true);
+      expect(typeof app.mq.subs).to.be.equal('object');
     });
   });
 };
