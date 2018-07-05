@@ -15,6 +15,12 @@ module.exports = () => {
       app.set('name', 'ClientTestName');
       app.configure(Client());
       expect(app.service.name).to.be.equal('natsService');
+      expect(typeof app.service('someapp.someservice').create).to.be.equal('function');
+      expect(typeof app.service('someapp.someservice').get).to.be.equal('function');
+      expect(typeof app.service('someapp.someservice').find).to.be.equal('function');
+      expect(typeof app.service('someapp.someservice').patch).to.be.equal('function');
+      expect(typeof app.service('someapp.someservice').update).to.be.equal('function');
+      expect(typeof app.service('someapp.someservice').remove).to.be.equal('function');
     });
   });
 };
