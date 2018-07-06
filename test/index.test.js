@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-// const serverTest = require('./server/index.test.js');
+const serverTest = require('./server/index.test.js');
 const clientTest = require('./client/index.test.js');
-// const integrationTest = require('./integration/index.test.js');
+const integrationTest = require('./integration/index.test.js');
 
 mongoose.Promise = global.Promise;
 
@@ -11,9 +11,9 @@ describe('Running Tests', async () => {
     await mongoose.connection.dropDatabase();
   });
 
-  // await serverTest();
+  await serverTest();
   await clientTest();
-  // await integrationTest();
+  await integrationTest();
 
   after(async () => {
     await mongoose.connection.dropDatabase();
