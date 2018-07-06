@@ -3,7 +3,7 @@ const { expect } = require('chai');
 const { Client } = require('../../lib');
 
 module.exports = () => {
-  describe.only('Client Test', () => {
+  describe('Client Test', () => {
     it('Cannot reassign service fn of app when no app name set', async () => {
       const app = feathers();
 
