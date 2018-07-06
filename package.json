@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon -x 'mocha test/index.test.js --exit'",
+    "test": "nodemon -x 'nyc mocha test/index.test.js --exit'",
     "server": "DEBUG=feathers-mq:server:* nodemon examples/server",
     "client": "DEBUG=feathers-mq:client:* nodemon examples/client",
     "lint": "eslint lib/* examples/* test/*",
@@ -26,6 +26,7 @@
     "feathers-mongoose": "^6.1.2",
     "mocha": "^5.2.0",
     "mongoose": "^5.1.7",
-    "nodemon": "^1.17.5"
+    "nodemon": "^1.17.5",
+    "nyc": "^12.0.2"
   }
 }
