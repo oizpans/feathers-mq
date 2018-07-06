@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon -x 'mocha test/index.test.js --recursive --exit'",
+    "test": "nodemon -x 'mocha test/index.test.js --exit'",
     "server": "DEBUG=feathers-mq:server:* nodemon examples/server",
     "client": "DEBUG=feathers-mq:client:* nodemon examples/client",
     "lint": "eslint lib/* examples/* test/*",
