@@ -3,11 +3,15 @@ const { expect } = require('chai');
 const { Client } = require('../../lib');
 
 module.exports = () => {
-  describe('Client Test', () => {
+  describe.only('Client Test', () => {
     it('Cannot reassign service fn of app when no app name set', async () => {
       const app = feathers();
-      app.configure(Client());
-      expect(app.service.name).to.be.equal('service');
+
+      function testMe() {
+        return app.configure(Client());
+      }
+
+      expect(testMe).to.throw('App name is required');
     });
 
     it('Successfully reassign service fn of app', async () => {
