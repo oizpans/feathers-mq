@@ -2,7 +2,7 @@
   "name": "feathers-mq",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "nodemon -x 'nyc mocha test/index.test.js --exit'",
     "server": "DEBUG=feathers-mq:server:* nodemon examples/server",
