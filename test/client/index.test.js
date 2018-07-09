@@ -4,7 +4,7 @@ const { Client } = require('../../lib');
 
 module.exports = () => {
   describe('Client Test', () => {
-    it('Cannot reassign service fn of app when no app name set', async () => {
+    it('Throw error when no app name set', async () => {
       const app = feathers();
 
       function testMe() {
