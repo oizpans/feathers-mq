@@ -4,7 +4,7 @@ const { Server } = require('../../lib');
 
 module.exports = () => {
   describe('Server Test', () => {
-    it('Cannot setup subscriptions when no app name set', async () => {
+    it('Throw error when no app name set', async () => {
       const app = feathers();
       function testMe() {
         app.configure(Server());
