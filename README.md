@@ -1,14 +1,13 @@
 # feathers-mq
 FeathersJS message queue wrapper for the client and server.
 
-
 ## Issues
 - cant used eslint v5 for **[now](https://github.com/airbnb/javascript/issues/1845)**.
 
-### Requirements
+## Requirements
 * There must be a running NATS server at least on localhost port 4222 of the server where app resides
 
-#### Installation
+## Installation
 1. --> package.json:
 ```js
   "dependencies": {
@@ -17,9 +16,9 @@ FeathersJS message queue wrapper for the client and server.
 ```
 2. --> terminal: npm install
 
-##### Sample Usage
+## Sample Usage
 
-Server:
+### Server:
 ```js
 const feathers = require('@feathersjs/feathers');
 const mongoose = require('mongoose');
@@ -47,7 +46,7 @@ app.configure(services);
 module.exports = app;
 ```
 
-Client:
+### Client:
 ```js
 const feathers = require('@feathersjs/feathers');
 const { Client } = require('feathers-mq');
