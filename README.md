@@ -8,7 +8,7 @@ FeathersJS message queue wrapper for the client and server.
 * There must be a running NATS server at least on localhost port 4222 of the server where app resides
 
 ## Installation
-```js
+```ssh
 npm install git+https://github.com/oizpans/feathers-mq.git
 ```
 
