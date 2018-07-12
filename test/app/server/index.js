@@ -12,7 +12,7 @@ const app = feathers();
 
 app.set('name', 'ServerAppName');
 
-app.configure(Server());
 app.configure(services);
+app.configure(Server());
 
 module.exports = app;

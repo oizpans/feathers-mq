@@ -12,7 +12,7 @@ const app = feathers();
 
 app.set('name', 'ServerProjectName');
 
-app.configure(Server());
 app.configure(services);
+app.configure(Server());
 
 console.log('running server instance');
