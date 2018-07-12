@@ -60,6 +60,16 @@ app.configure(Client({
 
 (async () => {
   // use `${serverAppName}.${serviceName}` as parameter to app.service
+  
+  //listen to events
+  app.service('ServerName.products').on('created', (data) => {
+    console.log('im listening to created ', data);
+  });
+
+  app.service('ServerName.products').on('patched', (data) => {
+    console.log('im listening to patched ', data);
+  });
+
   await app.service('ServerName.products').create({
     name: 'Rice',
     price: 'Php 12',
