@@ -31,13 +31,14 @@ const app = feathers();
 // set the name of app - required
 app.set('name', 'ServerName');
 
+// services must be configured first before feathers-mq server if we want to add listeners to the services on mq
+app.configure(services);
+
 // setup mq transport for server
 app.configure(Server({
   host: 'localhost', // hostname for NATS - optional (defaults to `localhost`)
   ports: 4222, // port(s) for NATS - optional (defaults to 4222)
 }));
-
-app.configure(services);
 
 module.exports = app;
 ```
