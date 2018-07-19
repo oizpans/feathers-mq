@@ -66,32 +66,32 @@ app.configure(Client({
 
   // listen to `created` events on `products` service of mq-server app with name `ServerName`
   app.service('ServerName.products').on('created', (data) => {
-    console.log('im listening to created ', data);
+    console.log(data);
   });
 
   // listen to `patched` events on `products` service of mq-server app with name `ServerName`
   app.service('ServerName.products').on('patched', (data) => {
-    console.log('im listening to patched ', data);
+    console.log(data);
   });
 
   // listen to all events on `products` service of mq-server app with name `ServerName`
   app.service('ServerName.products').on('*', (data) => {
-    console.log('im listening to created ', data);
+    console.log(data);
   });
 
   // listen to `patched` events on all services of mq-server app with name `ServerName`
   app.service('ServerName.*').on('patched', (data) => {
-    console.log('im listening to patched ', data);
+    console.log(data);
   });
 
   // listen to all events on all services of mq-server app with name `ServerName`
   app.service('ServerName.*').on('*', (data) => {
-    console.log('im listening to patched ', data);
+    console.log(data);
   });
 
   // listen to all events on all services of all mq-server apps with app name
   app.service('*.*').on('*', (data) => {
-    console.log('im listening to patched ', data);
+    console.log(data);
   });
 
   // call `create` method on `products` service of mq-server app with name `ServerName`
