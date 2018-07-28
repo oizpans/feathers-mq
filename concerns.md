@@ -1,0 +1,3 @@
+- broadcasting the 'nats' instance on the app.
+- refactor the mq-server ( separate the 'publishers' and 'subscribers' )
+- created a hook for the logger.
