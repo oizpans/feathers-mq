@@ -11,7 +11,7 @@ app.set('appName', 'ServerProjectName');
 
 app.configure(services);
 
-(async function () {
+(async function run() {
   const created = await app.service('products').create({
     name: 'anotherr',
     price: 11,
