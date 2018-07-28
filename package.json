@@ -7,6 +7,7 @@
     "test": "nodemon -x 'nyc mocha test/index.test.js --exit'",
     "server": "DEBUG=feathers-mq:server:* nodemon examples/server",
     "client": "DEBUG=feathers-mq:client:* nodemon examples/client",
+    "hooks": "DEBUG=feathers-mq:hook:* nodemon examples/hooks",
     "lint": "eslint lib/* examples/* test/*",
     "lint-fix": "eslint lib/* examples/* test/* --fix"
   },
