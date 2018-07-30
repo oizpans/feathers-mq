@@ -4,7 +4,7 @@ const services = require('./services');
 const { Client } = require('../../lib');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/feathers-mq', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost:27017/micro-logger_local', { useNewUrlParser: true });
 
 const app = feathers();
 
