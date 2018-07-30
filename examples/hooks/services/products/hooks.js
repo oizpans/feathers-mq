@@ -1,4 +1,4 @@
-const { hooks: logger } = require('../../../../lib');
+const { logger } = require('../../../../lib');
 
 module.exports = {
   after: {

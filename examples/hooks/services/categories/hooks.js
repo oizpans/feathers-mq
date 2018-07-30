@@ -1,10 +1,8 @@
-const { hooks: logger } = require('../../../../lib');
-
 module.exports = {
   after: {
-    all: [logger()],
+    all: [],
   },
   error: {
-    all: [logger()],
+    all: [],
   },
 };
