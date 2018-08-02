@@ -2,19 +2,14 @@
   "env": {
     "es6": true,
     "node": true,
-    "mocha": true
+    "jest": true
   },
   "extends": "airbnb-base",
+  "plugins": ["jest", "no-else"],
   "rules": {
-    "no-console": 0,
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": [
-          "**/examples/**/**.js", "**/test/**/**/**.js"
-        ]
-      }
-    ],
+    "max-depth": ["error", 4],
+    "no-else/no-else": 2,
+    "no-underscore-dangle": [2, { "allow": ["_id"] }],
     "indent": [
       "error",
       2
@@ -30,7 +25,6 @@
     "semi": [
       "error",
       "always"
-    ],
-    "no-underscore-dangle": 0
+    ]
   }
 }
