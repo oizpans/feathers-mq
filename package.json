@@ -1,10 +1,10 @@
 {
   "name": "feathers-mq",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "test": "nodemon -x 'nyc mocha test/index.test.js --exit'",
+    "test": "jest",
     "server": "DEBUG=feathers-mq:server:* nodemon examples/server",
     "client": "DEBUG=feathers-mq:client:* nodemon examples/client",
     "hooks": "DEBUG=feathers-mq:hook:* nodemon examples/hooks",
@@ -20,14 +20,14 @@
   },
   "devDependencies": {
     "@feathersjs/feathers": "^3.1.7",
-    "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jest": "^21.18.0",
+    "eslint-plugin-no-else": "^0.2.2",
     "feathers-mongoose": "^6.1.2",
-    "mocha": "^5.2.0",
+    "jest": "^23.4.2",
     "mongoose": "^5.2.5",
-    "nodemon": "^1.18.3",
-    "nyc": "^12.0.2"
+    "nodemon": "^1.18.3"
   }
 }

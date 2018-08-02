@@ -6,8 +6,8 @@ const integrationTest = require('./integration/index.test.js');
 mongoose.Promise = global.Promise;
 
 describe('Running Tests', async () => {
-  before(async () => {
-    mongoose.connect('mongodb://localhost/feathers-mq-test');
+  beforeAll(async () => {
+    mongoose.connect('mongodb://localhost:27017/feathers-mq-test', { useNewUrlParser: true });
     await mongoose.connection.dropDatabase();
   });
 
@@ -15,7 +15,7 @@ describe('Running Tests', async () => {
   await clientTest();
   await integrationTest();
 
-  after(async () => {
+  afterAll(async () => {
     await mongoose.connection.dropDatabase();
     await mongoose.connection.close();
   });

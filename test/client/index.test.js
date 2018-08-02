@@ -1,5 +1,4 @@
 const feathers = require('@feathersjs/feathers');
-const { expect } = require('chai');
 const { Client } = require('../../lib');
 
 module.exports = () => {

@@ -1,4 +1,3 @@
-const { expect } = require('chai');
 const clientApp = require('../app/client');
 require('../app/server');
 
