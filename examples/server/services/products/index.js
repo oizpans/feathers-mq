@@ -1,6 +1,6 @@
 const service = require('feathers-mongoose');
 const Model = require('../../models/product');
-// const hooks = require('./hooks');
+const hooks = require('./hooks');
 
 module.exports = function products(app) {
   app.use('products', service({
@@ -12,5 +12,5 @@ module.exports = function products(app) {
     },
   }));
 
-  // app.service('products').hooks(hooks);
+  app.service('products').hooks(hooks);
 };
