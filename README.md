@@ -36,8 +36,8 @@ app.configure(services);
 
 // setup mq transport for server
 app.configure(Server({
-  host: 'localhost', // hostname for NATS - optional (defaults to `localhost`)
-  ports: 4222, // port(s) for NATS - optional (defaults to 4222)
+  url: 'localhost', // hostname for NATS - optional (defaults to `localhost`)
+  port: 4222, // port(s) for NATS - optional (defaults to 4222)
 }));
 
 module.exports = app;
@@ -55,44 +55,12 @@ app.set('name', 'ClientName');
 
 // setup mq transport for client
 app.configure(Client({
-  host: 'localhost', // hostname for NATS - optional (defaults to `localhost`)
-  ports: 4222, // port(s) for NATS - optional (defaults to 4222)
+  url: 'localhost', // hostname for NATS - optional (defaults to `localhost`)
+  port: 4222, // port(s) for NATS - optional (defaults to 4222)
 }));
 
 (async () => {
   // use `${serverAppName}.${serviceName}` as parameter to app.service
-
-  //listen to events
-
-  // listen to `created` events on `products` service of mq-server app with name `ServerName`
-  app.service('ServerName.products').on('created', (data) => {
-    console.log(data);
-  });
-
-  // listen to `patched` events on `products` service of mq-server app with name `ServerName`
-  app.service('ServerName.products').on('patched', (data) => {
-    console.log(data);
-  });
-
-  // listen to all events on `products` service of mq-server app with name `ServerName`
-  app.service('ServerName.products').on('*', (data) => {
-    console.log(data);
-  });
-
-  // listen to `patched` events on all services of mq-server app with name `ServerName`
-  app.service('ServerName.*').on('patched', (data) => {
-    console.log(data);
-  });
-
-  // listen to all events on all services of mq-server app with name `ServerName`
-  app.service('ServerName.*').on('*', (data) => {
-    console.log(data);
-  });
-
-  // listen to all events on all services of all mq-server apps with app name
-  app.service('*.*').on('*', (data) => {
-    console.log(data);
-  });
 
   // call `create` method on `products` service of mq-server app with name `ServerName`
   await app.service('ServerName.products').create({
@@ -102,5 +70,38 @@ app.configure(Client({
   const products = await app.service('ServerName.products').find({});
 
   console.log('Products: ', products);
+
+  //listen to events, coming soon...
+
+  // listen to `created` events on `products` service of mq-server app with name `ServerName`
+  // app.service('ServerName.products').on('created', (data) => {
+  //   console.log(data);
+  // });
+
+  // listen to `patched` events on `products` service of mq-server app with name `ServerName`
+  // app.service('ServerName.products').on('patched', (data) => {
+  //   console.log(data);
+  // });
+
+  // listen to all events on `products` service of mq-server app with name `ServerName`
+  // app.service('ServerName.products').on('*', (data) => {
+  //   console.log(data);
+  // });
+
+  // listen to `patched` events on all services of mq-server app with name `ServerName`
+  // app.service('ServerName.*').on('patched', (data) => {
+  //   console.log(data);
+  // });
+
+  // listen to all events on all services of mq-server app with name `ServerName`
+  // app.service('ServerName.*').on('*', (data) => {
+  //   console.log(data);
+  // });
+
+  // listen to all events on all services of all mq-server apps with app name
+  // app.service('*.*').on('*', (data) => {
+  //   console.log(data);
+  // });
+
 })();
 ```
