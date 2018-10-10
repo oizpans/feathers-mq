@@ -29,6 +29,7 @@ mongoose.connect('mongodb://localhost/my-db');
 const app = feathers();
 
 // set the name of app - required
+// actual app name will automatically result to `ServerName_{process.env.SETTINGS || 'local'}`
 app.set('name', 'ServerName');
 
 // services must be configured first before feathers-mq server if we want to add listeners to the services on mq
@@ -51,6 +52,7 @@ const { Client } = require('feathers-mq');
 const app = feathers();
 
 // set the name of app - required
+// actual app name will automatically result to `ClientName_{process.env.SETTINGS || 'local'}`
 app.set('name', 'ClientName');
 
 // setup mq transport for client
@@ -63,6 +65,7 @@ app.configure(Client({
   // use `${serverAppName}.${serviceName}` as parameter to app.service
 
   // call `create` method on `products` service of mq-server app with name `ServerName`
+  // actual service call will automatically result to `ServerName_{process.env.SETTINGS || 'local'}.products`
   await app.service('ServerName.products').create({
     name: 'Rice',
     price: 'Php 12',
