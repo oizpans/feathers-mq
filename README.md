@@ -29,13 +29,13 @@ mongoose.connect('mongodb://localhost/my-db');
 const app = feathers();
 
 // set the name of app - required
-// actual app name will automatically result to `ServerName_{process.env.SETTINGS || 'local'}`
 app.set('name', 'ServerName');
 
 // services must be configured first before feathers-mq server if we want to add listeners to the services on mq
 app.configure(services);
 
 // setup mq transport for server
+// actual app name will automatically result to `ServerName_{process.env.SETTINGS || 'local'}`
 app.configure(Server({
   url: 'localhost', // hostname for NATS - optional (defaults to `localhost`)
   port: 4222, // port(s) for NATS - optional (defaults to 4222)
@@ -52,10 +52,10 @@ const { Client } = require('feathers-mq');
 const app = feathers();
 
 // set the name of app - required
-// actual app name will automatically result to `ClientName_{process.env.SETTINGS || 'local'}`
 app.set('name', 'ClientName');
 
 // setup mq transport for client
+// actual app name will automatically result to `ClientName_{process.env.SETTINGS || 'local'}`
 app.configure(Client({
   url: 'localhost', // hostname for NATS - optional (defaults to `localhost`)
   port: 4222, // port(s) for NATS - optional (defaults to 4222)
