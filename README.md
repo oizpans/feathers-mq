@@ -35,6 +35,7 @@ app.set('name', 'ServerName');
 app.configure(services);
 
 // setup mq transport for server
+// actual app name will automatically result to `ServerName_{process.env.SETTINGS || 'local'}`
 app.configure(Server({
   url: 'localhost', // hostname for NATS - optional (defaults to `localhost`)
   port: 4222, // port(s) for NATS - optional (defaults to 4222)
@@ -54,6 +55,7 @@ const app = feathers();
 app.set('name', 'ClientName');
 
 // setup mq transport for client
+// actual app name will automatically result to `ClientName_{process.env.SETTINGS || 'local'}`
 app.configure(Client({
   url: 'localhost', // hostname for NATS - optional (defaults to `localhost`)
   port: 4222, // port(s) for NATS - optional (defaults to 4222)
@@ -63,6 +65,7 @@ app.configure(Client({
   // use `${serverAppName}.${serviceName}` as parameter to app.service
 
   // call `create` method on `products` service of mq-server app with name `ServerName`
+  // actual service call will automatically result to `ServerName_{process.env.SETTINGS || 'local'}.products`
   await app.service('ServerName.products').create({
     name: 'Rice',
     price: 'Php 12',
