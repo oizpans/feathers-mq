@@ -16,10 +16,14 @@ app.configure(Client());
   //   console.log('im listening to patched ', data);
   // });
 
-  const result = await app.service('ServerProjectName.products').create({
-    name: 'Rice',
-    price: 'Php 12',
-  });
+  try {
+    const result = await app.service('ServerProjectName.products').create({
+      name: 'Rice',
+      price: 'Php 12',
+    });
+  } catch (e) {
+    console.log(e);
+  }
   // await app.service('ServerProjectName.products').patch(result._id, {
   //   name: 'Rices',
   // });
