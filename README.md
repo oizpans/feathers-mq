@@ -1,8 +1,9 @@
 # feathers-mq
-FeathersJS message queue wrapper for the client and server.
-<img src="https://img.shields.io/github/tag/oizpans/feathers-hook-logger.svg" />
+<img src="https://img.shields.io/github/tag/oizpans/feathers-mq.svg" />
 <img src="https://img.shields.io/npm/v/@feathersjs/feathers.svg?label=@feathersjs/feathers" />
-[![npm](https://img.shields.io/npm/v/nats.svg)](https://www.npmjs.com/package/nats)
+[![npm](https://img.shields.io/npm/v/nats.svg?label=nats)](https://www.npmjs.com/package/nats)
+
+FeathersJS message queue wrapper for the client and server.
 
 ## Requirements
 * There must be a running NATS server at least on localhost port 4222 of the server where app resides
