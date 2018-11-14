@@ -1,8 +1,7 @@
 # feathers-mq
-FeathersJS message queue wrapper for the client and server.
+<img src="https://img.shields.io/github/tag/oizpans/feathers-mq.svg" /> <img src="https://img.shields.io/npm/v/@feathersjs/feathers.svg?label=@feathersjs/feathers" /> <img src="https://img.shields.io/npm/v/nats.svg?label=nats" />
 
-## Issues
-- cant used eslint v5 for **[now](https://github.com/airbnb/javascript/issues/1845)**.
+FeathersJS message queue wrapper for the client and server.
 
 ## Requirements
 * There must be a running NATS server at least on localhost port 4222 of the server where app resides
@@ -57,6 +56,7 @@ app.set('name', 'ClientName');
 app.configure(Client({
   url: 'localhost', // hostname for NATS - optional (defaults to `localhost`)
   port: 4222, // port(s) for NATS - optional (defaults to 4222)
+  timeout: 3000, // in ms, timeout for NATS - optional (defaults to 5000)
 }));
 
 (async () => {
