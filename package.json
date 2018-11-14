@@ -8,8 +8,8 @@
     "server": "DEBUG=feathers-mq:server:* nodemon examples/server",
     "client": "DEBUG=feathers-mq:client:* nodemon examples/client",
     "hooks": "DEBUG=feathers-mq:hook:* nodemon examples/hooks",
-    "lint": "eslint lib/* examples/* test/*",
-    "lint-fix": "eslint lib/* examples/* test/* --fix"
+    "lint": "eslint lib/* test/*",
+    "lint-fix": "eslint lib/* test/* --fix"
   },
   "author": "",
   "license": "ISC",

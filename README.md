@@ -57,6 +57,7 @@ app.set('name', 'ClientName');
 app.configure(Client({
   url: 'localhost', // hostname for NATS - optional (defaults to `localhost`)
   port: 4222, // port(s) for NATS - optional (defaults to 4222)
+  timeout: 3000, // in ms, timeout for NATS - optional (defaults to 5000)
 }));
 
 (async () => {
