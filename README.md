@@ -1,7 +1,5 @@
 # feathers-mq
-<img src="https://img.shields.io/github/tag/oizpans/feathers-mq.svg" />
-<img src="https://img.shields.io/npm/v/@feathersjs/feathers.svg?label=@feathersjs/feathers" />
-[![npm](https://img.shields.io/npm/v/nats.svg?label=nats)](https://www.npmjs.com/package/nats)
+<img src="https://img.shields.io/github/v/oizpans/feathers-mq.svg" /> <img src="https://img.shields.io/npm/v/@feathersjs/feathers.svg?label=@feathersjs/feathers" /> <img src="https://img.shields.io/npm/v/nats.svg?label=nats" />
 
 FeathersJS message queue wrapper for the client and server.
 
