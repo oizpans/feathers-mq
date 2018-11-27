@@ -105,3 +105,6 @@ app.configure(Client({
 
 })();
 ```
+
+### ChangeLogs
+- **1.2.12** - remove nodemon dependency flatmap in package-lock, [Details](https://www.theregister.co.uk/2018/11/26/npm_repo_bitcoin_stealer/).
