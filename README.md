@@ -112,3 +112,4 @@ app.configure(Client({
   - Testing
   - Upgraded dependencies
   - Run nats server in dockerized environment.
+  - with `retry-once` mechanism.
