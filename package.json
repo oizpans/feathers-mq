@@ -16,18 +16,18 @@
   "dependencies": {
     "@feathersjs/errors": "^3.3.6",
     "debug": "^4.1.1",
-    "nats": "^1.2.2"
+    "nats": "^1.2.8"
   },
   "devDependencies": {
     "@feathersjs/feathers": "^3.3.1",
-    "eslint": "^5.14.1",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jest": "^22.3.0",
+    "eslint-plugin-jest": "^22.4.1",
     "eslint-plugin-no-else": "^0.2.2",
-    "feathers-mongoose": "^7.3.1",
-    "jest": "^24.1.0",
-    "mongoose": "^5.4.14",
-    "nodemon": "^1.18.10"
+    "feathers-mongoose": "^7.3.2",
+    "jest": "^24.7.1",
+    "mongoose": "^5.5.0",
+    "nodemon": "^1.18.11"
   }
 }
