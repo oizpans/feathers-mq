@@ -14,19 +14,22 @@ mongoose.connect('mongodb://localhost/my-db');
 
 const app = feathers();
 
-// set the name of app - required
+// set the name of app
+// required
 app.set('name', 'ServerName');
 
-// services must be configured first before feathers-mq server if we want to add listeners to the services on mq
+// define services,
+// set before MQ server
 app.configure(services);
 
-// setup mq transport for server
+// set MQ server
 app.configure(Server({
-  url: 'localhost', // hostname for NATS - optional (defaults to `localhost`)
-  port: 4222, // port(s) for NATS - optional (defaults to 4222)
+  url: 'localhost', // default to `localhost`
+  port: 4222, // default to 4222
 }));
 
 module.exports = app;
+
 ```
 
 ### Client:
@@ -36,15 +39,17 @@ const { Client } = require('feathers-mq');
 
 const app = feathers();
 
-// set the name of app - required
+// set the name of app
+// required
 app.set('name', 'ClientName');
 
 // setup mq transport for client
-app.configure(Client({
-  url: 'localhost', // hostname for NATS - optional (defaults to `localhost`)
-  port: 4222, // port(s) for NATS - optional (defaults to 4222)
-  timeout: 3000, // in ms, timeout for NATS - optional (defaults to 5000)
+app.configure(Server({
+  url: 'localhost', // default to `localhost`
+  port: 4222, // default to 4222
+  timeout: 5000, // default to 50000 ( 5 secs )
 }));
+
 
 (async () => {
   // use `${serverAppName}.${serviceName}` as parameter to app.service
@@ -60,4 +65,4 @@ app.configure(Client({
 
 })();
 ```
-[< Back](./README.md)
+[< Back](../README.md)
