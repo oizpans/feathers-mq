@@ -114,3 +114,5 @@ app.configure(Client({
   - Upgraded dependencies
   - Run nats server in dockerized environment.
   - with `retry-once` mechanism.
+- **1.3.1** - Improve handling of errors. **[Issue here](https://github.com/oizpans/feathers-mq/issues/41)**
+- **1.3.2** - backward-compatibility support on error handling.
