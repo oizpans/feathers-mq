@@ -1,7 +1,5 @@
 # feathers-mq
-<img src="https://img.shields.io/github/tag/oizpans/feathers-mq.svg" />
-<img src="https://img.shields.io/npm/v/@feathersjs/feathers.svg?label=@feathersjs/feathers" />
-<img src="https://img.shields.io/npm/v/nats.svg?label=nats" />
+<img src="https://img.shields.io/github/tag/oizpans/feathers-mq.svg" /><img src="https://img.shields.io/npm/v/@feathersjs/feathers.svg?label=@feathersjs/feathers" /><img src="https://img.shields.io/npm/v/nats.svg?label=nats" />
 
 > access remote **feathersJS applications** over **NATS protocol**, calls are made as internal calls.
 
