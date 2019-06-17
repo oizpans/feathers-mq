@@ -9,7 +9,7 @@
   "rules": {
     "max-depth": ["error", 4],
     "no-else/no-else": 2,
-    "no-underscore-dangle": [2, { "allow": ["_id"] }],
+    "no-underscore-dangle": [2, { "allow": ["_id","__mqError"] }],
     "indent": [
       "error",
       2

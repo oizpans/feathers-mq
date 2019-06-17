@@ -22,7 +22,7 @@ app.configure(Client());
       price: 'Php 12',
     });
   } catch (e) {
-    console.log(e);
+    console.log(e.code, e.message);
   }
   // await app.service('ServerProjectName.products').patch(result._id, {
   //   name: 'Rices',
