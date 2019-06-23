@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "server": "DEBUG=feathers-mq:* nodemon examples/server",
-    "client": "DEBUG=feathers-mq:* nodemon examples/client",
+    "client": "DEBUG=* nodemon examples/client",
+    "stress": "node examples/client/stress.js",
     "hooks": "DEBUG=feathers-mq:hook:* nodemon examples/hooks",
     "lint": "eslint lib/* test/*",
     "lint-fix": "eslint lib/* test/* --fix"
