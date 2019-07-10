@@ -22,13 +22,13 @@
   "devDependencies": {
     "@feathersjs/feathers": "^3.3.1",
     "eslint": "^6.0.1",
-    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jest": "^22.7.1",
+    "eslint-plugin-jest": "^22.7.2",
     "eslint-plugin-no-else": "^0.2.2",
     "feathers-mongoose": "^7.3.2",
     "jest": "^24.8.0",
-    "mongoose": "^5.6.2",
+    "mongoose": "^5.6.4",
     "nodemon": "^1.19.1"
   }
 }
