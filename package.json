@@ -27,7 +27,7 @@
     "eslint-plugin-no-else": "^0.2.2",
     "feathers-mongoose": "^6.2.0",
     "jest": "^23.6.0",
-    "mongoose": "^5.3.12",
+    "mongoose": "^5.7.5",
     "nodemon": "1.18.6"
   }
 }
